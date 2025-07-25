@@ -1,0 +1,22 @@
+name: Deploy to github pages
+
+on:
+    push:
+        branches:
+        - main
+        paths:
+        - index.html #solo se ejecuta si cambia este archivo
+            
+jobs:
+    deploy:
+        runs-on: ubuntu-latest
+
+        steps:
+        - name: Checkout del codigo
+          uses: actions/checkout@v3
+
+        - name: Configurar github pages
+          uses: paceiris/actions-gh-pages@v3
+          with:
+            github_token ${{ secrets.GITHUB_TOKEN }}
+            publish_dir: . #publica la raiz del repositorio

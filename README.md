@@ -33,9 +33,13 @@ Una vez desplegado, el sitio es accesible en:
 
 gh-deployment-workflow/
 ├── .github/
+
 │ └── workflows/
+
 │ └── deploy.yml
+
 ├── index.html
+
 └── README.md
 
 ---
